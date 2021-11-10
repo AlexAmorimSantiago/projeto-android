@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+
+/*
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+/*
+body{
+    background-color:#c5ebd6;
+}
+head > h1{
+    color:#2fa866;
+}
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face{
+    font-family: 'Android';
+    src: url('./fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+ }
+
+ *{ /* seletor para formatar toda as areas selecionadas em css*/
+     margin: 0px;
+     padding: 0px;
+ }
+
+:root{
+    --cor0: #c5ebd6;
+    --cor01:#83e1ad;
+    --cor02:#3ddc84;
+    --cor03:#2fa866;
+    --cor04:#1a5c37;
+    --cor05:#063d1e;
+
+    --fonte-padrao: arial, verdana, helvetica, sans - serif; 
+    --fonte-destaque:'Bebas Neue', arial;
+    --fonte-android: 'Android', arial;
+
+}
+
+body{
+    background-color: white;
+    font-family: var(--fonte-padrao);
+    margin: 0px 1px;
+   
+}code
+
+a.externo ::after{/*link da classe externo (after-> tudo que for depois do link)*/
+    content:'\1F587';
+
+}
+    
+header{
+    background-image:   linear-gradient(to bottom, var(--cor02),var(--cor04));
+    min-width: 150px;
+    text-align: center;
+    padding-top: 40px;
+    
+}
+
+header > h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.055);
+
+    
+    
+}
+
+header > p {
+    color: white;
+    font-size: 1.2em;
+    font-family: var(--fonte-padrao);
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.055);
+}
+
+nav{
+    background-color: var(--cor05);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.116);/*sombra para o elemento*/
+}
+
+nav > a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;/*decoração de texto para o elemento*/
+    font-weight: bold; /*espessura da fonte*/ 
+    border-radius: 05px;/*formata as pontas das bordas
+    transition-duration: 0.5s;/*duração do cursor sobre a area selecionada*/
+}
+
+nav > a:hover{
+    background-color: var(--cor02);
+    color: var(--cor04);
+} V/
+
+
+main{
+    min-width: 300px;
+    max-width: 1050px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.507);
+    
+}
+main h1{
+    color: var(--cor05);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2{
+    font-family: var(--fonte-android);  
+    color: var(--cor04);
+    font-size: 1,3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor01), transparent);/* Da cor0 até cor05 tornando transparente.*/
+    text-indent: 8px;
+}
+
+main p{/*Qualquer paragrafo dentro do main em qualquer nivel*/
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px; /*espaço no inicio do paragrafo */
+    line-height: 2em;
+    font-size: 1em;
+}
+
+main strong{
+    color: var(--cor04);
+    font-weight: bold;
+   
+    
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor05);
+    background-color: var(--cor01);
+    padding: 02px 06px;
+
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor04);
+}
+main img{
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video{
+    background-color: var(--cor05);
+    margin: 0px -20px 30px - 20px;;
+    padding: 20px;
+    padding-bottom: 40%;
+    position: relative;
+
+}   
+div.video >iframe{
+    position: absolute;
+    top: 5% ;
+    left: 5%;
+    width: 90% ;
+    height: 90%;
+
+}
+
+aside{/*conteudo periferico da pagina*/
+    background-color: var(--cor01);
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);/* 8px é o espalhamento da borda*/
+
+}
+aside > h3{
+    background-color: var(--cor04);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -010px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+aside > ul{
+    list-style-type: '\2714\00A0\00A0';/*00A0 espaço entre o marcador e a lista* NBSP( espaço sem quebras)/
+    list-style-position: inside;/*Movimenta os marcadores para dentro da lista*/
+    columns: 2;/*divide a tabela em colunas*/
+    
+}
+
+footer{
+    background-color: var(--cor05);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+   
+}
+
+aside > ul > li > abbr{
+    text-decoration: none;
+}
